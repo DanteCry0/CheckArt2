@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checker — Verificador Gráfico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index-style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <header>
+    <div class="logo"><span class="logo-bracket">[</span>CHK<span class="logo-bracket">]</span></div>
+    <nav>
+      <a href="Checker_Documents/arte.html">Arte</a>
+      <a href="Checker_Documents/cordao.html">Cordão</a>
+      <a href="Checker_Documents/arquivo.html">Arquivos</a>
+    </nav>
+    <div class="header-tag"><span class="dot"></span>v2.0</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-label"><span class="mono">// ferramenta gráfica</span></div>
+      <h1>Verificador<br><em>de Arte</em><br>&amp; Cordão</h1>
+      <p class="hero-desc">Valide artes, layouts e arquivos gráficos com precisão — direto no navegador, sem instalar nada.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">módulos</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">0</span><span class="stat-label">instalações</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">no browser</span></div>
+      </div>
+    </section>
+
+    <section class="cards">
+
+      <a href="Checker_Documents/arte.html" class="card card--arte">
+        <div class="card-num mono">01</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="32" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
+            <rect x="14" y="14" width="20" height="20" rx="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <rect x="18" y="18" width="12" height="12" rx="1" fill="currentColor" opacity="0.2"/>
+            <line x1="24" y1="8" x2="24" y2="14" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="24" y1="34" x2="24" y2="40" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="8" y1="24" x2="14" y2="24" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="34" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Verificação de Arte</h2>
+          <p>Canvas com marcas de corte, sangria e segurança. Faça upload da sua arte e valide as margens em tempo real. Suporte a furos e exportação PNG.</p>
+        </div>
+        <div class="card-tags">
+          <span>Canvas</span><span>Upload</span><span>Margens</span><span>Furos</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="Checker_Documents/cordao.html" class="card card--cordao">
+        <div class="card-num mono">02</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="17" width="40" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+            <rect x="10" y="21" width="28" height="6" rx="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <line x1="4" y1="24" x2="10" y2="24" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="38" y1="24" x2="44" y2="24" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Verificação de Cordão</h2>
+          <p>Layout dedicado para cordões com especificações de sangria, corte e segurança no formato 10630×342px. Visualize e exporte com precisão.</p>
+        </div>
+        <div class="card-tags">
+          <span>Cordão</span><span>Layout</span><span>Exportar</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a href="Checker_Documents/arquivo.html" class="card card--arquivo">
+        <div class="card-num mono">03</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6H30L40 16V42H12V6Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M30 6V16H40" stroke="currentColor" stroke-width="2"/>
+            <line x1="18" y1="24" x2="32" y2="24" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="18" y1="30" x2="28" y2="30" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="18" y1="36" x2="30" y2="36" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h2>Visualização de Arquivos</h2>
+          <p>Visualize PDFs diretamente no navegador e converta arquivos gráficos para JPG — sem precisar de software adicional.</p>
+        </div>
+        <div class="card-tags">
+          <span>PDF</span><span>Visualizar</span><span>Converter</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+    </section>
+  </main>
+
+  <footer>
+    <span class="mono">Checker v2.0</span>
+    <span>Ferramenta de verificação gráfica para crachás e cordões</span>
+  </footer>
+</body>
+</html>
