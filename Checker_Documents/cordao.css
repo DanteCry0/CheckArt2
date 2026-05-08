@@ -1,0 +1,41 @@
+/* cordao.css — verificação de cordão */
+
+.workspace--cordao{flex-direction:column}
+
+.canvas-outer{width:100%;display:flex;flex-direction:column;gap:8px}
+.canvas-toolbar{display:flex;align-items:center;justify-content:space-between;padding:0 4px}
+.canvas-toolbar-right{display:flex;align-items:center;gap:10px}
+
+.canvas-scroll-hint{font-size:10px;color:var(--text-dim);text-align:center;letter-spacing:1px;font-family:var(--font-mono)}
+
+/* wrapper com scroll horizontal */
+.canvas-scroll-wrap{
+  width:100%;overflow-x:auto;
+  border-radius:var(--radius);
+  background:var(--surface);
+  border:1px solid var(--border);
+  scrollbar-width:thin;
+  scrollbar-color:var(--surface3) transparent;
+}
+.canvas-scroll-wrap::-webkit-scrollbar{height:6px}
+.canvas-scroll-wrap::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:4px}
+
+/* canvas interno — renderiza no tamanho real do arquivo, escala visual via CSS */
+.canvas-wrap{
+  /* mostra canvas em escala reduzida para caber na tela (3402px → ~900px visual) */
+  width:3402px;
+  height:102px;
+  background:repeating-conic-gradient(#1a1a24 0% 25%,#111118 0% 50%) 0 0/16px 16px;
+}
+
+#canvas{
+  display:block;
+  width:3402px;
+  height:102px;
+}
+
+/* sidebar horizontal */
+@media(min-width:900px){
+  .sidebar{flex-direction:row;flex:none;width:100%}
+  .sidebar .sidebar-block{flex:1}
+}
