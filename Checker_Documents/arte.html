@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Arte — Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="arte.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header>
+    <a href="../index.html" class="logo"><span class="logo-bracket">[</span>CHK<span class="logo-bracket">]</span></a>
+    <nav>
+      <a href="arte.html" class="active">Arte</a>
+      <a href="cordao.html">Cordão</a>
+      <a href="arquivo.html">Arquivos</a>
+    </nav>
+    <a href="../index.html" class="header-back">← Início</a>
+  </header>
+
+  <div class="page-wrapper">
+    <div class="page-header">
+      <div class="page-tag">// módulo 01</div>
+      <h1>Verificação de Arte</h1>
+      <p>Valide margens de sangria, corte e segurança para crachás e credenciais.</p>
+    </div>
+
+    <div class="workspace">
+      <!-- Canvas -->
+      <div class="canvas-outer">
+        <div class="canvas-toolbar">
+          <span class="canvas-size mono" id="canvas-size-label">456 × 700 px</span>
+          <div class="canvas-toolbar-right">
+            <span class="status-badge status-ok" id="status-badge">pronto</span>
+          </div>
+        </div>
+        <div class="canvas-wrap" id="canvas-container">
+          <canvas id="canvas" width="456" height="700"></canvas>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+        <!-- Upload -->
+        <div class="sidebar-block">
+          <h3>Arquivo</h3>
+          <div class="upload-zone">
+            <input type="file" id="upload" accept="image/*">
+            <div class="upload-zone-icon">🖼️</div>
+            <p><strong>Clique para enviar</strong><br>PNG, JPG, WEBP</p>
+          </div>
+        </div>
+
+        <!-- Produto -->
+        <div class="sidebar-block">
+          <h3>Produto</h3>
+          <div class="field">
+            <label for="productType">Tipo de produto</label>
+            <select id="productType">
+              <option value="credencial">Credencial (456×700)</option>
+              <option value="cracha">Crachá (456×700)</option>
+              <option value="carteirinha">Carteirinha (456×700)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Furo -->
+        <div class="sidebar-block">
+          <h3>Furo</h3>
+          <div class="field">
+            <label for="holeType">Tipo de furo</label>
+            <select id="holeType">
+              <option value="none">Nenhum</option>
+              <option value="ovalCenter">Ovoide Centralizado</option>
+              <option value="ovalDouble">Ovoide Duplo</option>
+              <option value="roundCenter">Redondo Centralizado</option>
+              <option value="roundDouble">Redondo Duplo</option>
+            </select>
+          </div>
+          <div class="field" style="margin-top:12px">
+            <label for="borderColor">Cor do contorno</label>
+            <select id="borderColor">
+              <option value="black">Preto</option>
+              <option value="white">Branco</option>
+              <option value="red">Vermelho</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Legenda -->
+        <div class="sidebar-block">
+          <h3>Legenda</h3>
+          <div class="legend">
+            <div class="legend-item">
+              <div class="legend-dot" style="background:#00d4ff;color:#00d4ff"></div>
+              <span>Sangria</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot" style="background:#ff4466;color:#ff4466"></div>
+              <span>Corte</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot" style="background:#00ff88;color:#00ff88"></div>
+              <span>Segurança</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ações -->
+        <div class="sidebar-block">
+          <h3>Ações</h3>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <button class="btn btn-primary" id="download-canvas">⬇ Baixar PNG</button>
+            <button class="btn btn-danger" id="delete-image">✕ Remover Imagem</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

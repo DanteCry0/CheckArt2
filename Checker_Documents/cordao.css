@@ -1,0 +1,84 @@
+/* cordao.css — estilos específicos da verificação de cordão */
+
+.workspace--cordao {
+  flex-direction: column;
+}
+
+.canvas-outer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.canvas-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.canvas-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.canvas-size {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.canvas-scroll-hint {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.canvas-scroll-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface3) transparent;
+}
+
+.canvas-scroll-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+.canvas-scroll-wrap::-webkit-scrollbar-thumb {
+  background: var(--surface3);
+  border-radius: 4px;
+}
+
+/* Canvas renderiza em escala visual para caber na tela */
+.canvas-wrap {
+  width: 10630px;
+  height: 342px;
+  background: repeating-conic-gradient(#1a1a24 0% 25%, #111118 0% 50%) 0 0 / 16px 16px;
+}
+
+#canvas {
+  display: block;
+  width: 10630px;
+  height: 342px;
+}
+
+/* Sidebar horizontal em telas grandes */
+@media (min-width: 900px) {
+  .workspace--cordao {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    flex: none;
+    width: 100%;
+  }
+  .sidebar .sidebar-block {
+    flex: 1;
+  }
+}
