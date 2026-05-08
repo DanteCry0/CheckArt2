@@ -38,19 +38,6 @@ Ferramenta web para validar artes gráficas com marcas de **sangria**, **corte**
 
 ## Deploy no Vercel
 
-1. Faça push deste repositório para o GitHub
-2. Acesse [vercel.com](https://vercel.com) → **Add New Project**
-3. Importe o repositório
-4. Configurações:
-   - **Framework Preset:** Other
-   - **Root Directory:** `/`
-   - **Output Directory:** (deixar vazio)
-5. Clique em **Deploy** ✅
-
-Não é necessário nenhum build step — o projeto é 100% HTML/CSS/JS estático.
-
----
-
 ## Especificações Técnicas
 
 ### Verificação de Arte
