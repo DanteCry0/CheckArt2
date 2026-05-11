@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualização de Arquivos — Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="arquivo.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header>
+    <a href="../index.html" class="logo"><span class="logo-bracket">[</span>CHK<span class="logo-bracket">]</span></a>
+    <nav>
+      <a href="arte.html">Arte</a>
+      <a href="cordao.html">Cordão</a>
+      <a href="arquivo.html" class="active">Arquivos</a>
+    </nav>
+    <a href="../index.html" class="header-back">← Início</a>
+  </header>
+
+  <div class="page-wrapper">
+    <div class="page-header">
+      <div class="page-tag">// módulo 03</div>
+      <h1>Visualização de Arquivos</h1>
+      <p>Visualize PDFs e imagens diretamente no navegador. Converta para JPG em um clique.</p>
+    </div>
+
+    <div class="workspace workspace--arquivo">
+
+      <!-- Sidebar esquerda -->
+      <div class="sidebar sidebar--arquivo">
+
+        <div class="sidebar-block">
+          <h3>Enviar Arquivo</h3>
+          <div class="upload-zone" id="upload-zone">
+            <input type="file" id="file-upload" accept=".pdf,image/*">
+            <div class="upload-zone-icon">📁</div>
+            <p><strong>Clique para enviar</strong><br>PDF, PNG, JPG, WEBP</p>
+          </div>
+          <div id="file-info" class="file-info" style="display:none">
+            <span class="mono" id="file-name">—</span>
+            <span class="mono" id="file-size" style="color:var(--text-dim)">—</span>
+          </div>
+        </div>
+
+        <div class="sidebar-block">
+          <h3>Ações</h3>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <button class="btn btn-primary" id="convert-file" disabled>⬇ Baixar como JPG</button>
+            <button class="btn btn-ghost" id="clear-file" disabled>✕ Limpar</button>
+          </div>
+        </div>
+
+        <div class="sidebar-block">
+          <h3>Formatos suportados</h3>
+          <div class="format-list">
+            <div class="format-item"><span class="format-badge">PDF</span><span>Visualização nativa</span></div>
+            <div class="format-item"><span class="format-badge">PNG</span><span>Imagem raster</span></div>
+            <div class="format-item"><span class="format-badge">JPG</span><span>Imagem comprimida</span></div>
+            <div class="format-item"><span class="format-badge">WEBP</span><span>Formato moderno</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Preview -->
+      <div class="preview-outer">
+        <div class="preview-toolbar">
+          <span class="mono" style="font-size:11px;color:var(--text-dim)" id="preview-label">nenhum arquivo</span>
+          <span class="status-badge status-ok" id="status-badge" style="display:none">ok</span>
+        </div>
+        <div class="preview-area" id="file-preview">
+          <div class="preview-empty">
+            <div class="preview-empty-icon">📄</div>
+            <p>Envie um arquivo para visualizar</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="visualizacao-arquivos.js"></script>
+</body>
+</html>
